@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawn = Queen</title>
+    <link type="text/css" rel="stylesheet" href="pawn-equals-queen.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👑</text></svg>">
+</head>
+<body onload="loadbody()">
+    
+    <div class="content-width">
+        <h1>Pawn = Queen</h1>
+    </div>
+
+    <div id="board">
+        <div id="piece-container"></div>
+
+              <div class="tile" data-x="0" data-y="0">
+        </div><div class="tile other" data-x="0" data-y="1">
+        </div><div class="tile" data-x="0" data-y="2">
+        </div><div class="tile other" data-x="0" data-y="3">
+
+        </div><div class="tile other" data-x="1" data-y="0">
+        </div><div class="tile" data-x="1" data-y="1">
+        </div><div class="tile other" data-x="1" data-y="2">
+        </div><div class="tile" data-x="1" data-y="3">
+
+        </div><div class="tile" data-x="2" data-y="0">
+        </div><div class="tile other" data-x="2" data-y="1">
+        </div><div class="tile" data-x="2" data-y="2">
+        </div><div class="tile other" data-x="2" data-y="3">
+
+        </div><div class="tile destination" data-x="3" data-y="0">
+        </div><div class="tile tile-double" data-x="3" data-y="12">
+            <div id="tile-double-text">
+                Use the standard chess movements to get the Pawn to the red square
+            </div>
+        </div><div class="tile" data-x="3" data-y="3">
+        </div>
+
+    </div>
+
+    <div class="content-width under-box">
+        <p id="debug-mousedown"></p>
+        <p id="debug-mouseup"></p>
+        <div class="under-topbar">
+            <p id="print-movecount">Moves: 0</p>
+            <a id="replay-button" href="javascript:window.location.reload(true)">New game</a>
+        </div>
+        <hr>
+
+        <div id="credits-container">
+            <p>Pawn = Queen puzzle designed by
+                <a href="https://uz.linkedin.com/in/khaydarbekoff">
+                    Sherzod Khaydarbekov
+                </a>
+            </p>
+    
+            <p>Ported to online by
+                <a href="https://www.soheekim.dev/">
+                    Sohee Kim
+                </a>
+            </p>
+    
+            <p>
+                <a href="javascript:;" onclick="toggleCredit();">Icon credits</a>
+            </p>
+            <div id="icon-credit-container" style="display: none;">
+                <div id="overlay" onclick="toggleCredit();"></div>
+                <div id="content">
+                    <h2>Icon Credits</h2>
+                    <p>
+                        Pawn by Q.P from <a href="https://thenounproject.com/browse/icons/term/pawn/" target="_blank" title="Pawn Icons">Noun Project</a> (CC BY 3.0)
+                    </p>
+                    <p>
+                        Knight by Q.P from <a href="https://thenounproject.com/browse/icons/term/knight/" target="_blank" title="Knight Icons">Noun Project</a> (CC BY 3.0)
+                    </p>
+                    <p>
+                        Bishop by Q.P from <a href="https://thenounproject.com/browse/icons/term/bishop/" target="_blank" title="Bishop Icons">Noun Project</a> (CC BY 3.0)
+                    </p>
+                    <p>
+                        Rook by Q.P from <a href="https://thenounproject.com/browse/icons/term/rook/" target="_blank" title="rook Icons">Noun Project</a> (CC BY 3.0)
+                    </p>
+                    <p>
+                        Queen by Q.P from <a href="https://thenounproject.com/browse/icons/term/queen/" target="_blank" title="queen Icons">Noun Project</a> (CC BY 3.0)
+                    </p>
+    
+                    <p class="align-centre">
+                        <a href="javascript:;" onclick="toggleCredit();">Close</a>
+                    </p>
+                </div>
+            </div>
+    
+            <p id="sourcecode" class="align-centre">
+                <a href="https://github.com/soheekim2109/pawn-equals-queen">Source code</a>
+            </p>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="pawn-equals-queen.js"></script>
+</body>
+</html>
